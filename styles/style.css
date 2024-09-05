@@ -24,12 +24,29 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--destaque);
+    border-radius: 10px;
+  }
+
 /** HEADER ----------------------------------------------- **/
 
 header {
     width: 100dvw;
     background-color: var(--background);
     box-shadow: 0px 0px 10px 10px var(--background);
+    position: fixed;
+    padding: 5px 0px;
 }
 
 .container_nav {
@@ -37,11 +54,11 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 50px;
+    padding: 0px 50px;
 }
 
 .item_nav_logo {
-    width: 100px;
+    width: 80px;
     user-select: none;
 }
 
@@ -123,6 +140,7 @@ main {
     justify-content: center;
     margin-top: 50px;
     gap: 100px;
+    margin-top: 100px;
 }
 
 .home {
