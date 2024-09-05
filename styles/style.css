@@ -222,6 +222,14 @@ main {
 
 @media (max-width:767px) {
 
+    header {
+        position: relative;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+
     body {
         overflow-x: hidden;
     }
