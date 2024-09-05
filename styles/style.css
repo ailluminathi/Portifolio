@@ -4,6 +4,7 @@
     --background: #161616;
     --background-2: rgba(255, 255, 255, 0.100);
     --branco: #FFFFFF;
+    --texto-secundario: #707070;
     --destaque: #963CE6;
     --destaque-2: #5B149A;
     --fonte: "Roboto", sans-serif;
@@ -20,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 /** HEADER ----------------------------------------------- **/
@@ -120,6 +122,7 @@ main {
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
+    gap: 100px;
 }
 
 .home {
@@ -191,11 +194,11 @@ main {
 
 @media (max-width:1024px) {
     .home_lado-1 {
-        width: 50%;
+        width: 100%;
     }
 
     .home_lado-2 {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -217,6 +220,158 @@ main {
 
     .home_lado-2 {
         width: 100%;
+    }
+}
+
+/* SOBRE */
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    border-bottom: 1px solid var(--destaque);
+    padding-bottom: 100px;
+}
+
+.container_educacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item_educacao_faculdade {
+    width: 50%;
+}
+
+.item_titulo {
+    color: var(--destaque);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.item_descricao {
+    border-left: 2px solid var(--destaque);
+    padding: 5px 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item_descricao h2 {
+    color: var(--branco);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.item_descricao h3 {
+    color: var(--texto-secundario);
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.item_descricao p {
+    margin-top: 10px;
+    color: var(--branco);
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.item_descricao .destaque {
+    color: var(--destaque);
+    font-weight: 400;
+}
+
+.item_educacao_icones {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item_educacao_icones img {
+    width: 25%;
+}
+
+.item_educacao_icones img:nth-child(1) {
+    width: 100px;
+}
+
+.item_educacao_icones img:nth-child(2) {
+    width: 250px;
+}
+
+.item_certificados {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.item_certificados_lado-1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item_certificados_lado-2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container_skills {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.item_skills {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+@media (max-width:1024px) {
+    .container_educacao {
+        gap: 20px;
+    }
+
+    .item_educacao_faculdade {
+        width: 70%;
+    }
+
+    .item_educacao_icones {
+        width: 30%;
+    }
+
+    .item_certificados {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .item_certificados_lado-1, .item_certificados_lado-2 {
+        width: 100%;
+    }
+
+    .item_skills {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    .container_educacao {
+        flex-direction: column;
+    }
+
+    .item_educacao_faculdade {
+        width: 100%;
+    }
+
+    .item_educacao_icones { 
+        margin-top: 100px;
     }
 }
 
